@@ -7,9 +7,6 @@ export function Logo() {
       id='Capa_1'
       x={0}
       y={0}
-      style={{
-        enableBackground: 'new 0 0 138 136.054'
-      }}
       viewBox='0 0 138 136.054'
     >
       <style>{'.st1{fill:#fff}'}</style>
