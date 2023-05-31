@@ -23,12 +23,12 @@ export function Hero() {
       }}
     >
       <h1
-        className={`${archivoBlack.className} text-[#2d3133] text-center max-w-4xl mx-auto text-5xl font-medium tracking-tight font-display text-slate-900 sm:text-6xl`}
+        className={`${archivoBlack.className} text-slate-900 text-center max-w-4xl mx-auto text-5xl font-medium tracking-tight font-display sm:text-6xl`}
       >
         Obtén <span className='text-[#167db7]'>recomendaciones</span> para postular a empleos
       </h1>
       <p className={`${mplus1p.className} text-center max-w-xl mx-auto mt-6 text-lg tracking-tight text-slate-700`}>
-        Descubre los elementos clave para potenciar tu carta de presentación y destacar en tu búsqueda laboral.
+        Descubre los elementos clave para potenciar tu carta de presentación y destacar en tu búsqueda laboral.
       </p>
       <div className='flex justify-center mt-10 gap-x-6'>
         <Link
