@@ -23,7 +23,7 @@ export function Hero() {
       }}
     >
       <h1
-        className={`${archivoBlack.className} text-slate-900 text-center max-w-4xl mx-auto text-5xl font-medium tracking-tight font-display sm:text-6xl`}
+        className={`${archivoBlack.className} text-slate-900 text-center max-w-4xl mx-auto text-4xl font-medium tracking-tight font-display sm:text-6xl`}
       >
         Obtén <span className='text-[#167db7]'>recomendaciones</span> para postular a empleos
       </h1>
