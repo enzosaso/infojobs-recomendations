@@ -50,7 +50,7 @@ export function ListOfOffers(props: { offers: Offer[] }) {
       </Flex>
       <Grid numCols={1} numColsSm={2} numColsLg={3} className='gap-4'>
         {offers.map(item => (
-          <Card key={item.id} className='max-w-md h-fit'>
+          <Card key={item.id} className='flex flex-col justify-between max-w-md h-fit min-h-[280px]'>
             <Badge className='mb-2 bg-[#167db7] text-white'>{item.province}</Badge>
             <Title>{item.title}</Title>
             <Text>{item.salaryDescription}</Text>
@@ -90,57 +90,4 @@ export function ListOfOffers(props: { offers: Offer[] }) {
       </Grid>
     </div>
   )
-  // <Card className='mt-5'>
-  //   <Flex justifyContent='start' className='space-x-2'>
-  //     <Title>Ofertas de trabajo de InfoJobs</Title>
-  //     <Badge color='gray'>{offers.length}</Badge>
-  //   </Flex>
-
-  //   <Text className='mt-2'>Las últimas ofertas de trabajo</Text>
-
-  //   <Table className='mt-6'>
-  //     <TableHead>
-  //       <TableRow>
-  //         <TableHeaderCell>Puesto</TableHeaderCell>
-  //         <TableHeaderCell>Provincia</TableHeaderCell>
-  //         <TableHeaderCell>Experiencia</TableHeaderCell>
-  //         <TableHeaderCell className='text-center'>Acción</TableHeaderCell>
-  //       </TableRow>
-  //     </TableHead>
-
-  //     <TableBody>
-  //       {offers.map(item => (
-  //         <Fragment key={item.id}>
-  //           <TableRow
-  //             className='transition-colors cursor-pointer hover:bg-sky-300'
-  //             onClick={() => {
-  //               window.open(item.link, '_blank')
-  //             }}
-  //           >
-  //             <TableCell>{item.title}</TableCell>
-  //             <TableCell>{item.province}</TableCell>
-  //             <TableCell>{item.experienceMin}</TableCell>
-  //             <TableCell className='text-center'>
-  //               <Button
-  //                 disabled={Boolean(scores[item.id])}
-  //                 loading={loading[item.id]}
-  //                 loadingText='Revisando...'
-  //                 onClick={async event => {
-  //                   event.stopPropagation()
-  //                   await handleClick(item.id)
-  //                 }}
-  //                 size='xs'
-  //                 variant='secondary'
-  //                 color='gray'
-  //               >
-  //                 Obtener recomendación
-  //               </Button>
-  //             </TableCell>
-  //           </TableRow>
-  //           <Score message={scores[item.id]} />
-  //         </Fragment>
-  //       ))}
-  //     </TableBody>
-  //   </Table>
-  // </Card>
 }
