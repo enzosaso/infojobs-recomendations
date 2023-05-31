@@ -6,6 +6,7 @@ import { LightBulbIcon, ArrowNarrowRightIcon } from '@heroicons/react/solid'
 import { Offer } from '../types'
 import { useState } from 'react'
 import { Score } from './Score'
+import { getChatGPT } from '../services/getChatGPT'
 
 export function ListOfOffers(props: { offers: Offer[] }) {
   const { offers } = props
@@ -27,16 +28,11 @@ export function ListOfOffers(props: { offers: Offer[] }) {
     }))
 
     try {
-      const res = await fetch(`/api/check-description?id=${id}`, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      const json = await res.json()
+      const res = await getChatGPT(id)
 
       setScores(prevScores => ({
         ...prevScores,
-        [id]: json
+        [id]: res
       }))
     } finally {
       setLoading(prevLoading => ({
